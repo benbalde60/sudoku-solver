@@ -8,6 +8,11 @@ int** generateBoard(){
         BOARD[i] = new int[9] {0, 0, 0, 0, 0, 0, 0, 0, 0};
     }//Initialization ends here
 
+    // Guys following are the things to do
+    /*
+     * 1. Create a randomnumber generator
+     * ....*/
+
     BOARD[0] = new int[9] {0, 0, 4, 0, 5, 0, 0, 0, 0};
     BOARD[1] = new int[9] {9, 0, 0, 7, 3, 4, 6, 0, 0};
     BOARD[2] = new int[9] {0, 0, 3, 0, 2, 1, 0, 4, 9};
