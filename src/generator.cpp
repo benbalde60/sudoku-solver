@@ -1,6 +1,8 @@
 //
 // Created by Keshav Bhandari on 2/8/24.
-//
+
+// This function generates a 9x9 static sudoku board.
+
 int** generateBoard(){
     // Following initialization is important
     int** BOARD = new int*[9];
