@@ -1,4 +1,5 @@
 #include <iostream>
+#include <random>
 #include "include/sudoku.h"
 #include "include/sudokuio.h"
 #include "include/utility.h"

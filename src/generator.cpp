@@ -1,7 +1,38 @@
-//
+#include <random>
+#include <iomanip>
+
+using namespace std;
 // Created by Keshav Bhandari on 2/8/24.
 
-// This function generates a 9x9 static sudoku board.
+// This function generates a blank 9x9 sudoku board.
+
+//getRandEntry() -> {1,......9}
+int randIntGenerator(int low, int high) {
+    random_device rd;  // Obtain a random number from hardware
+    mt19937 eng(rd()); // Seed the generator
+    uniform_int_distribution<> distribution(0, 9); // Define the range
+    return distribution(eng); // Generate the random number
+}
+
+int* randArr(int size, int low, int high) {
+    int* arr = new int[size];
+    for(int i = 0; i < size; i++)
+        arr[i] = randIntGenerator(low, high);
+    return arr;
+}
+
+//fillBoxDiagonally(from [0],to [3]) (then 3-6 and 6-9)
+
+//Then solve board();
+  //getRandEntry();
+
+  //solveBoard(Board...)
+  //randDeleteBoard();
+
+  //return BOARD;
+
+
+//create function to fill from 0-3, 3-6, 6-9 fillRandomlyFromto([i],[j])
 
 int** generateBoard(){
     // Following initialization is important
@@ -10,14 +41,5 @@ int** generateBoard(){
         BOARD[i] = new int[9] {0, 0, 0, 0, 0, 0, 0, 0, 0};
     }//Initialization ends here
 
-    BOARD[0] = new int[9] {0, 0, 4, 0, 5, 0, 0, 0, 0};
-    BOARD[1] = new int[9] {9, 0, 0, 7, 3, 4, 6, 0, 0};
-    BOARD[2] = new int[9] {0, 0, 3, 0, 2, 1, 0, 4, 9};
-    BOARD[3] = new int[9] {0, 3, 5, 0, 9, 0, 4, 8, 0};
-    BOARD[4] = new int[9] {0, 9, 0, 0, 0, 0, 0, 3, 0};
-    BOARD[5] = new int[9] {0, 7, 6, 0, 1, 0, 9, 2, 0};
-    BOARD[6] = new int[9] {3, 1, 0, 9, 7, 0, 2, 0, 0};
-    BOARD[7] = new int[9] {0, 0, 9, 1, 8, 2, 0, 0, 3};
-    BOARD[8] = new int[9] {0, 0, 0, 0, 6, 0, 1, 0, 0};
-    return BOARD;
+
 }
