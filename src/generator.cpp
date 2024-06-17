@@ -3,6 +3,9 @@
 #include <algorithm>
 #include <iomanip>
 #include <iostream>
+#include "../include/sudoku.h"
+#include "../include/sudokuio.h"
+
 
 using namespace std;
 // Created by Keshav Bhandari on 2/8/24.
@@ -92,7 +95,33 @@ int** generateBoard(){
     int** BOARD = new int*[9];
     for(int i = 0; i < 9; i++){
         BOARD[i] = new int[9] {0, 0, 0, 0, 0, 0, 0, 0, 0};
-    }//Initialization ends here
+    }
+
+    vector<int> shuffledNumbers = shuffle();
+
+
+//    int** Board = new int*[9];
+//    for (int i = 0; i < 9; ++i) {
+//        Board[i] = new int[9];
+//    }
+
+    // Print the shuffled numbers
+    fillBoxRandom(BOARD, 0);
+    fillBoxRandom(BOARD, 3);
+    fillBoxRandom(BOARD, 6);
+
+    solveBoard(BOARD, 0, 0);
+
+    deleteNumbersRandomly(BOARD, 40);
+
+    for(int i=0;i<9;++i) {
+        for(int j=0;j<9;++j) {
+            cout << BOARD[i][j];
+            cout << " ";
+        }
+        cout << endl;
+    }
+return BOARD;
 
 
 }

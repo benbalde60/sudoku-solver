@@ -15,11 +15,11 @@ int NUM_PUZZLE_TO_GENERATE = 10;
 using namespace std;
 
 int main() {
-    //initDataFolder();
-    //createAndSaveNPuzzles(NUM_PUZZLE_TO_GENERATE, PATH_TO_PUZZLES, PUZZLE_PREFIX);
-    //solveAndSaveNPuzzles(NUM_PUZZLE_TO_GENERATE, PATH_TO_PUZZLES, PATH_TO_SOLUTIONS, SOLUTION_PREFIX);
+    initDataFolder();
+    createAndSaveNPuzzles(NUM_PUZZLE_TO_GENERATE, PATH_TO_PUZZLES, PUZZLE_PREFIX);
+    solveAndSaveNPuzzles(NUM_PUZZLE_TO_GENERATE, PATH_TO_PUZZLES, PATH_TO_SOLUTIONS, SOLUTION_PREFIX);
 
-
+/*
     vector<int> shuffledNumbers = shuffle();
 
 
@@ -45,6 +45,7 @@ int main() {
        cout << endl;
    }
 
+*/
 
 
     return 0;
