@@ -10,5 +10,4 @@ void printBoard(int**, int, int, int);
 bool isValid(int**, int, int, int);
 /*this function will change the board to fully fill it or solve it*/
 bool solveBoard(int**, int, int);
-int** generateBoard();
 #endif //SUDOKUPROJECT_SUDOKU_H
