@@ -10,7 +10,7 @@ string PATH_TO_SOLUTIONS = "data/solutions/";
 string PUZZLE_PREFIX = "PUZZLE";
 string SOLUTION_PREFIX = "SOLUTION";
 
-int NUM_PUZZLE_TO_GENERATE = 1000;
+int NUM_PUZZLE_TO_GENERATE = 10000;
 
 using namespace std;
 
