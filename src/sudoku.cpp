@@ -4,7 +4,8 @@
 #include "../include/sudoku.h"
 #include <iostream>
 using namespace std;
-
+/*this function takes the board,the row,and colum as an input and prints the board
+ */
 void printBoard(int** BOARD, int r, int c, int k)
 {
     if(BOARD[r][c]>0) k = 0;
@@ -35,7 +36,8 @@ void printBoard(int** BOARD, int r, int c, int k)
         cout << endl;
     }
 }
-
+/*this function is used to verify wether or not the board is a valid and solvable sudoku board
+ */
 bool isValid(int** BOARD, int r, int c, int k)
 {
     for (int i = 0; i < 9; i++)
@@ -54,7 +56,8 @@ bool isValid(int** BOARD, int r, int c, int k)
     }
     return true;
 }
-
+/*this function recursively goes throught the board it's fed and solves it
+ */
 bool solveBoard(int** BOARD, int r, int c){
     if(r == 9)
         return true;
