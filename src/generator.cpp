@@ -10,22 +10,6 @@
 using namespace std;
 // Created by Keshav Bhandari on 2/8/24.
 
-// This function generates a blank 9x9 sudoku board.
-
-//getRandEntry() -> {1,......9}
-/*int randIntGenerator(int low, int high) {
-    random_device rd;  // Obtain a random number from hardware
-    mt19937 eng(rd()); // Seed the generator
-    uniform_int_distribution<> distribution(0, 9); // Define the range
-    return distribution(eng); // Generate the random number
-}
-
-int* randArr(int size, int low, int high) {
-    int* arr = new int[size];
-    for(int i = 0; i < size; i++)
-        arr[i] = randIntGenerator(low, high);
-    return arr;
-} */
 /* this function initializes a vector of 9 int elements from 1 to 9 and shuffles in a random order and then returns the shuffled vector
  */
 vector<int> shuffle(){
@@ -80,18 +64,6 @@ void deleteNumbersRandomly(int** Board, int numToDelete) {
     }
 }
 
-//fillBoxDiagonally(from [0],to [3]) (then 3-6 and 6-9)
-
-//Then solve board();
-  //getRandEntry()-> {1.......9};
-
-  //solveBoard(Board...)
-  //randDeleteBoard();
-
-  //return BOARD;
-
-
-//create function to fill from 0-3, 3-6, 6-9 fillRandomlyFromto([i],[j])
 /*this function create a full 2d array that is gonna be our 9x9 board, initializes it and then uses the random shuffle function to fill 3x3 with random numbers diagonally in our 9x9 board and uses the solveBoard function to fill the missing numbers creating a fully filled 9x9 sudoku board
  */
 int** generateBoard(){
@@ -104,12 +76,6 @@ int** generateBoard(){
     vector<int> shuffledNumbers = shuffle();
 
 
-//    int** Board = new int*[9];
-//    for (int i = 0; i < 9; ++i) {
-//        Board[i] = new int[9];
-//    }
-
-    // Print the shuffled numbers
     fillBoxRandom(BOARD, 0);
     fillBoxRandom(BOARD, 3);
     fillBoxRandom(BOARD, 6);

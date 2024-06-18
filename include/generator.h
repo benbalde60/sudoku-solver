@@ -14,7 +14,6 @@ void fillBoxRandom(int **Board,int start);
 /*this function returns an vector containing numbers 1-9 in a random order
  */
 vector<int> shuffle();
-int* randArr();
 /*this function will generate and return a fully valid and solvable 9x9 sudoku board*/
 int** generateBoard();
 #endif //SUDOKUPROJECT_GENERATOR_H
