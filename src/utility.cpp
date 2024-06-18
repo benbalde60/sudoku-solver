@@ -9,12 +9,14 @@
 #include "../include/sudoku.h"
 using namespace std;
 string getFileName(int index, const string &destination, const string &prefix){
+    // Generates a filename based on parameters.
     string index_str = to_string(index);
     string index_fill = string(4 - index_str.length(), '0');
     string filename = destination + index_fill + index_str + prefix + ".txt";
     return filename;
 }
 void createAndSaveNPuzzles(const int& num_puzzles, const string& destination, const string& prefix){
+    // Creates and saves a number of Sudoku puzzles.
     int total_success = 0;
     for(int i=0; i < num_puzzles; i++){
         int** BOARD = generateBoard();
@@ -30,6 +32,7 @@ void createAndSaveNPuzzles(const int& num_puzzles, const string& destination, co
 }
 
 void solveAndSaveNPuzzles(const int &num_puzzles, const string& source, const string& destination, const string& prefix){
+    // Solves and saves the solutions of a number of Sudoku puzzles.
     int total_success_solve = 0;
     int total_success_write = 0;
     vector<string> path_to_sudokus = getAllSudokuInFolder(source);
